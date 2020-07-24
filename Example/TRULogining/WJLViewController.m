@@ -7,6 +7,7 @@
 //
 
 #import "WJLViewController.h"
+#import <TRUNetworking.h>
 
 @interface WJLViewController ()
 

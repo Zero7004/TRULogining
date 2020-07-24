@@ -8,6 +8,7 @@ target 'TRULogining_Example' do
   target 'TRULogining_Tests' do
     inherit! :search_paths
 
-    pod 'FBSnapshotTestCase'
+#    pod 'FBSnapshotTestCase'
+    pod 'TRUNetworking', :path => '../../TRUNetworking'
   end
 end

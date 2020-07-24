@@ -38,8 +38,8 @@
 
 /* Begin PBXFileReference section */
 		06E6D77E2D9B4E90C3840889 /* Pods_TRULogining_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TRULogining_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		262CB5232594768281D77A2C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		2BC74C65C7D871E584540F8B /* TRULogining.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = TRULogining.podspec; path = ../TRULogining.podspec; sourceTree = "<group>"; };
+		262CB5232594768281D77A2C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2BC74C65C7D871E584540F8B /* TRULogining.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TRULogining.podspec; path = ../TRULogining.podspec; sourceTree = "<group>"; };
 		3D5A60113950C9EBCF1F3A49 /* Pods-TRULogining_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRULogining_Example.debug.xcconfig"; path = "Target Support Files/Pods-TRULogining_Example/Pods-TRULogining_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* TRULogining_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TRULogining_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,7 +64,7 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		87E325E7692EE4ED71234900 /* Pods-TRULogining_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRULogining_Tests.release.xcconfig"; path = "Target Support Files/Pods-TRULogining_Tests/Pods-TRULogining_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A196DD78731241E2D34E960C /* Pods-TRULogining_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRULogining_Example.release.xcconfig"; path = "Target Support Files/Pods-TRULogining_Example/Pods-TRULogining_Example.release.xcconfig"; sourceTree = "<group>"; };
-		B36A36286AC5792F76154EC7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B36A36286AC5792F76154EC7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E002644F0B8FB94A7B789449 /* Pods-TRULogining_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRULogining_Tests.debug.xcconfig"; path = "Target Support Files/Pods-TRULogining_Tests/Pods-TRULogining_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F69B8936628D3EC46AF23655 /* Pods_TRULogining_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TRULogining_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -193,7 +193,6 @@
 				E002644F0B8FB94A7B789449 /* Pods-TRULogining_Tests.debug.xcconfig */,
 				87E325E7692EE4ED71234900 /* Pods-TRULogining_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -249,6 +248,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = wangjianlong;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = P26J6XCT3X;
+						ProvisioningStyle = Manual;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -259,6 +262,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -304,10 +308,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TRULogining_Example/Pods-TRULogining_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/TRULogining/TRULogining.framework",
+				"${BUILT_PRODUCTS_DIR}/TRUNetworking/TRUNetworking.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TRULogining.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TRUNetworking.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -321,11 +327,11 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TRULogining_Tests/Pods-TRULogining_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
+				"${BUILT_PRODUCTS_DIR}/TRUNetworking/TRUNetworking.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TRUNetworking.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -513,12 +519,15 @@
 			baseConfigurationReference = 3D5A60113950C9EBCF1F3A49 /* Pods-TRULogining_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = P26J6XCT3X;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TRULogining/TRULogining-Prefix.pch";
 				INFOPLIST_FILE = "TRULogining/TRULogining-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = WildcardAppID;
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -529,12 +538,15 @@
 			baseConfigurationReference = A196DD78731241E2D34E960C /* Pods-TRULogining_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = P26J6XCT3X;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TRULogining/TRULogining-Prefix.pch";
 				INFOPLIST_FILE = "TRULogining/TRULogining-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = WildcardAppID;
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
